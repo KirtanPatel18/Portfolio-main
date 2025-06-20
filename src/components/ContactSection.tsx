@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, Linkedin, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
@@ -20,14 +19,13 @@ const ContactSection = () => {
     try {
       await emailjs.send(
         'service_1gxe5dg',
-        'template_hkqq0in',
+        'template_610kmoh',
         {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-          to_name: 'Kirtan Patel'
+          name: formData.name,
+          title: formData.message,
+          email: formData.email
         },
-        '94fNS2V9OuPQE-MtW'
+        'ddFgOrugubexvByvf'
       );
 
       toast({
